@@ -22,7 +22,7 @@ if (a >= b && a >= d)
 {
     Console.Write("Наибольшее число : " + a);
 }
-else if (a < b && b > d)
+else if (a <= b && b >= d)
 {
     Console.Write("Наибольшее число : " + b);
 }
