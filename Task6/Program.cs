@@ -3,21 +3,44 @@
 // 78 -> третьей цифры нет
 // 32679 -> 6
 
-Console.Clear();
+string number3 = Convert.ToString(new Random().Next(1, 100000));
+    Console.WriteLine($"Заданное число: {number3}");
 
-Console.Write("Введите любое число : ");
-int a = Convert.ToInt32(Console.ReadLine());
-int index = 0;
+    if (number3.Length < 3) Console.WriteLine("Третьей цифры нет");
+    else
+    {
+        Console.WriteLine(number3[2]);
+    }
 
-if (index <= a)
-            {
-                Console.WriteLine(a % 100);
-                a /= 10;                
-            }
+  
 
-else{
-Console.Write(" Найти третью цифру от числа невозможно! : ");
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
