@@ -23,6 +23,6 @@ double numberBY = Convert.ToDouble(Console.ReadLine());
 Console.Write("Введите B(Z) число:");
 double numberBZ = Convert.ToDouble(Console.ReadLine());
 
-double distanceAB = Math.Sqrt(Math.Pow(numberBX - numberAX, 2) + Math.Pow(numberBY - numberAY, 2) + Math.Pow(numberBZ + numberAZ, 2));
+double distanceAB = Math.Sqrt(Math.Pow(numberBX - numberAX, 2) + Math.Pow(numberBY - numberAY, 2) + Math.Pow(numberBZ - numberAZ, 2));
 Console.Write(Math.Round(distanceAB, 2, MidpointRounding.ToZero));
 

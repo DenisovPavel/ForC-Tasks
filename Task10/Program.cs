@@ -9,7 +9,9 @@ Console.Write("Введите первое число: ");
 int numberN = Convert.ToInt32(Console.ReadLine());
 Console.Write("Введите второе число: ");
 int numberM = Convert.ToInt32(Console.ReadLine());
+
 int count = 0;
+
 if (numberN > numberM)
 {
     Console.WriteLine($"Ошибка ввода чисел! Число {numberN} не должно быть больше числа {numberM}! Повторите ввод!");
@@ -20,5 +22,6 @@ while (numberN < numberM & count <= numberM)
     Console.WriteLine($"Число {numberN} в кубической степени - {vkube}");
     numberN++;
     count++;
+  
 }
 
