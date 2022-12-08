@@ -22,9 +22,6 @@ int[] array = FillArray(size, min, max);
 
 Console.WriteLine(IsCorrectNumbers(min, max) ? $" Массив [ {string.Join(", ", array)} ] \n Колличество четных трехзначных числе в массиве   [ {string.Join(", ", getEvenNumber(array))} ]" : "Введенные числа не допустимы");
 
-
-
-
 int[] FillArray(int sizeArray, int minValue, int maxValue) 
 {
     Random random = new Random();
@@ -36,7 +33,6 @@ int[] FillArray(int sizeArray, int minValue, int maxValue)
     return resultArray;
 }
 
-
 int getEvenNumber(int[] inputArray)
 {
     int count = 0;
@@ -45,7 +41,6 @@ int getEvenNumber(int[] inputArray)
         if (inputArray[i] % 2 == 0)
 
             count++;
-
     }
     return count;
 
