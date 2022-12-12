@@ -6,8 +6,6 @@
 
 Console.Clear();
 
-Console.Clear();
-
 Console.WriteLine("Введите размерность массива: ");
 int size = Convert.ToInt32(Console.ReadLine());
 
@@ -30,8 +28,6 @@ int[] FillArray(int sizeArray, int minValue, int maxValue)
     }
     return resultArray;
 }
-
-
 
 int getSumNotEvenPosition(int[] arraySize)
 {

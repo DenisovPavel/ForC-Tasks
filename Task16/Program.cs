@@ -14,7 +14,7 @@ Console.WriteLine("Введите максимальное допустимое 
 int max = Convert.ToInt32(Console.ReadLine());
 
 
-double [] size = fillArray(array, min, max);
+double[] size = fillArray(array, min, max);
 Console.WriteLine($"Заданный массив: [ {string.Join(",", size)} ] - имеет разницу между максимальным и минимальным элементов массива [{getDifference(size)}]");
 
 double getDifference(double[] array)
@@ -36,8 +36,6 @@ double getDifference(double[] array)
     }
     return difference;
 }
-
-
 double[] fillArray(int sizeArray, int minValue, int maxValue)
 {
     Random rnd = new Random();
@@ -48,4 +46,6 @@ double[] fillArray(int sizeArray, int minValue, int maxValue)
     }
     return massiv;
 }
+
+
 
