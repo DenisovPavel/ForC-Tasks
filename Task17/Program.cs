@@ -4,40 +4,100 @@
 
 // 1, -7, 567, 89, 223-> 3
 
-Console.WriteLine("Введите числа:");
-int number = Convert.ToInt32(Console.ReadLine()); // пользователь ввел число
+Console.Write("Введите элементы(через пробел): ");
+int[] arr = Array.ConvertAll(Console.ReadLine().Split(), int.Parse);
+Console.WriteLine();
+Console.WriteLine($"Количество чисел больше 0 ввёл пользователь равно: {string.Join(",", ShowNumbers(arr))}");
 
+int ShowNumbers(int[] array)
+{int count = 0;
+    int[] massiv = new int[array.Length];
 
-FillArray(number);
-Console.WriteLine($"Исходный массив [ {string.Join(" ", number)} ]");  // продемонстрировал метод число-> массив;
-
-GetNumberMoreZero(number); // метод показывающий количество чисел которые больше 0
-Console.WriteLine($"Колличество чисел больше 0 : {string.Join(" ", number)} ");
-
-int[] FillArray(int size)  // метод перевода числа в массив
-{
-    int[] numbersarray = new int[size];
-    for (int i = 0; i < numbersarray.Length; i++) ;
-    return numbersarray;
-}
-
-void GetNumberMoreZero(int num) // метод определяющий что N числа больше 0 (записывает в счетчик и выводит счетчик)
-{
-    int count = 0;
-    int [] morezero = new int[num];
-
-    for (int i = 0; i < morezero.Length; i++)
-
-        if (morezero[i] >= 0) // сравнил элемент с 0
+    for (int i = 0; i < massiv.Length; i++)
+    {
+        
+        if (massiv[i] > 0)
         {
-            count = count + i; // если он больше 0, то к счетчику прибавил 1
-            Console.WriteLine(count);
+            count++;
         }
-        else
-            Console.WriteLine(count); // если = или меньше то вывел 0
-
-
+    }
+    return count;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Console.WriteLine("Введите числа:");
+// int number = Convert.ToInt32(Console.ReadLine()); // пользователь ввел число
+
+
+// FillArray(number);
+// Console.WriteLine($"Исходный массив [ {string.Join(" ", number)} ]");  // продемонстрировал метод число-> массив;
+
+// GetNumberMoreZero(number); // метод показывающий количество чисел которые больше 0
+// Console.WriteLine($"Колличество чисел больше 0 : {string.Join(" ", number)} ");
+
+// int[] FillArray(int size)  // метод перевода числа в массив
+// {
+//     int[] numbersarray = new int[size];
+//     for (int i = 0; i < numbersarray.Length; i++) ;
+//     return numbersarray;
+// }
+
+
+// int count = 0;
+// void GetNumberMoreZero(int num) // метод определяющий что N числа больше 0 (записывает в счетчик и выводит счетчик)
+// {
+//     int count = 0;
+//     int[] morezero = new int[num];
+
+//     for (int i = 0; i < morezero.Length; i++)
+
+//         if (morezero[i] > 0) // сравнил элемент с 0
+//         {
+//             count++; ; // если он больше 0, то к счетчику прибавил 1
+//         }
+// }
+
+
 
 
 
