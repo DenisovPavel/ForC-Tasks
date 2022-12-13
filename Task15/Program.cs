@@ -34,7 +34,7 @@ int getSumNotEvenPosition(int[] arraySize)
     int result = 0;
     for (int i = 1; i < arraySize.Length; i+=2)
     {
-       if (arraySize[i] % 2 != 0);
+       if (arraySize[i] % 2 != 0)
         result = result + arraySize[i];
     }
     return result;

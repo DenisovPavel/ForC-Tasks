@@ -46,6 +46,3 @@ double[] fillArray(int sizeArray, int minValue, int maxValue)
     }
     return massiv;
 }
-
-
-

@@ -6,8 +6,6 @@
 // 8 4 2 4
 // Среднее арифметическое каждого столбца: 4,6; 5,6; 3,6; 3.
 
-
-
 Console.Clear();
 
 Console.WriteLine("Введите количество строк двумерного массива");
@@ -21,14 +19,14 @@ int min = Convert.ToInt32(Console.ReadLine());
 
 Console.WriteLine("Максимальное возможное значение в двумерном массиве");
 int max = Convert.ToInt32(Console.ReadLine());
-
+Console.WriteLine();
 
 int[,] array = FillArray(rows, columns, min, max);
 
 PrintArray(array);
 Console.WriteLine();
 
-Console.WriteLine($" Cреднее арифметическое элементов {ShowSumRows(array, columns)}");
+ShowSumColumns(array);
 
 int[,] FillArray(int arrayRows, int arrayColumns, int minValue, int maxValue)
 {
@@ -57,17 +55,18 @@ void PrintArray(int[,] inputArray)
     }
 }
 
-int ShowSumRows(int[,] showmassiv, int showcolomns)
+void ShowSumColumns(int[,] showmassiv)
 {
-
-    int sum = 0;
+    double sum = 0;
     for (int i = 0; i < showmassiv.GetLength(0); i++)
     {
         for (int j = 0; j < showmassiv.GetLength(1); j++)
         {
-            sum += j / showmassiv.GetLength(1);
+            sum = sum + showmassiv[i, j];
         }
-
+        
+       Console.WriteLine($"Среднее арифм. элементов columns = {Math.Round(sum/showmassiv.GetLength(0), 1)}");
+       sum = 0;
     }
-    return sum;
+
 }
