@@ -57,16 +57,18 @@ void PrintArray(int[,] inputArray)
 
 void ShowSumColumns(int[,] showmassiv)
 {
-    double sum = 0;
-    for (int i = 0; i < showmassiv.GetLength(0); i++)
+
+    for (int j = 0; j < showmassiv.GetLength(1); j++)
     {
-        for (int j = 0; j < showmassiv.GetLength(1); j++)
+        double sum = 0; 
+
+        for (int i= 0; i < showmassiv.GetLength(0); i++)
         {
-            sum = sum + showmassiv[i, j];
+            sum = sum + showmassiv[i,j];
         }
-        
-       Console.WriteLine($"Среднее арифм. элементов columns = {Math.Round(sum/showmassiv.GetLength(0), 1)}");
-       sum = 0;
+
+        Console.WriteLine($"Среднее арифм. элементов columns = {Math.Round(sum / showmassiv.GetLength(1), 1)}");
+       
     }
 
 }
