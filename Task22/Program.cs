@@ -29,9 +29,9 @@ int[,] array = FillArray(rows, columns, min, max);
 PrintArray(array);
 Console.WriteLine();
 
-DoSort(array);
+DoSort(rarray);
+ Console.WriteLine("Отсортированный массив:\n ",String.Join(" ",array));
 
-Console.WriteLine($" массив после сортировки {string.Join(",", array)} ");
 
 int[,] FillArray(int arrayRows, int arrayColumns, int minValue, int maxValue)
 {
@@ -60,22 +60,27 @@ void PrintArray(int[,] inputArray)
     }
 }
 
-int [,] DoSort(int[,] inputunsortArray)
+void DoSort(int[,] inputunsortArray)
+
 {
     int[,] sortarray = new int[inputunsortArray.GetLength(0), inputunsortArray.GetLength(1)];
 
-    for (int i = 0; i < sortarray.GetLength(0) - 1; i++) // с 1го эл до последнего;
+    for (int i = 0; i < sortarray.GetLength(0); i++) // с 1го эл до последнего;
     {
-        for (int j = 0; j < sortarray.GetLength(1) - 1; j++)
+        for (int j = 0; j < sortarray.GetLength(1); j++)
         {
-            if (sortarray[i, j + 1] < sortarray[i, j])  // следующий < текущего
+            for (int min = 0; min < sortarray.GetLength(1) - 1; min++)
             {
-                int temp = sortarray[i, j];    //  времен.переменная = текущий
-                sortarray[i, j] = sortarray[i, j + 1]; // текущий = следующему
-                sortarray[i, j + 1] = temp; // следующий = текущему; 
+
+
+                if (sortarray[i, min] < sortarray[i, min + 1])  // следующий < текущего
+                {
+                    int temp = sortarray[i, min + 1];    //  времен.переменная = текущий
+                    sortarray[i, min + 1] = sortarray[i, min]; // текущий = следующему
+                    sortarray[i, min] = temp; // следующий = временной; 
+                }
             }
         }
     }
-    return sortarray;
 }
-// TODO
+
